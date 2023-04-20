@@ -51,7 +51,7 @@ const Menu = ({show}) => {
                     setSelectedStyle(option.name)
                     move(option.name)
                     }} className={`text-center text-white flex p-3 items-center flex-col cursor-pointer transition duration-300 justify-center ${selectedStyle === option.name ? 'bg-light-hover' : 'hover:bg-light-hover'}`} >
-                    <img src={option.imgSrc} alt="Marker" className='w-[50px]'/>
+                    <img src={option.imgSrc} alt="Marker" className='h-[40px] md:h-[50px]'/>
                     <div>{option.name}</div>
                 </div>
             )
