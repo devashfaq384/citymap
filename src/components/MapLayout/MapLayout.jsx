@@ -15,7 +15,7 @@ const MapLayout = () => {
   return (
     <div className=" h-[100vh] bg-center bg-cover bg-fixed" style={{ backgroundImage: `url(${Shattered})` }} > 
         <div className='w-full h-[10%] ' >
-            <div className='w-32 pt-3 md:mx-auto' >
+            <div className='w-32 pt-4 md:mx-auto' >
                 <img src={Logo} alt="logo" />
             </div>
             <div className='flex gap-4 absolute top-0 right-0 mt-5' >
