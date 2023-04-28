@@ -6,7 +6,7 @@ const  styleSlice = createSlice({
     name: 'styleState',
     initialState: {
         name : "water",
-        style : "mapbox://styles/ashfaq384/clfwdovsg003401mpotp64xp4"
+        style : "mapbox://styles/ashfaq384/clfwiesx000ar01mhzjobmctv"
     },
     reducers: {
         changeStyle(state, action) {

@@ -1,10 +1,11 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Shattered from '../../images/shattered.png'
 import Logo from '../../images/mapLogo.png'
 import CityMap from '../CityMap/CityMap'
 import Rotate from '../../images/rotate.png'
 import { changeSize } from '../../store/slices/Size'
 import { useDispatch, useSelector } from 'react-redux'
+import { TiPlus } from 'react-icons/ti'
 
 const MapLayout = () => {
 
@@ -24,7 +25,9 @@ const MapLayout = () => {
             </div>
         </div>
         <div className=' h-[90%] flex flex-col justify-center items-center '>
-                <div className='pb-10' >Do you know that you can drag and drop the map</div>
+            <div className='flex' >
+                <TiPlus className='w-6 h-6 mt-[1px]' ></TiPlus> <div className='pb-10' >Wist je dat je kan slepen</div>
+            </div>
                     <CityMap></CityMap>
             <div onClick={()=>{
                 dispatch(changeSize(

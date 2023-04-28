@@ -4,7 +4,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const menuSlice = createSlice({
     name: 'menuState',
-    initialState: "Location",
+    initialState: "Locatie",
     reducers: {
         moveTo(state, action) {
             return action.payload

@@ -12,7 +12,7 @@ const Size = () => {
             size : "Small 11 x 17",
             price : "$35",
             height : "360px",
-            width : '250px'
+            width : "250px"
         },
         {
             size : "Medium 18 x 24",
@@ -28,24 +28,14 @@ const Size = () => {
         },
     ]
 
-    const [unit, setUnit] = useState('inch')
-
-
   return (
     <div className=' flex flex-col mx-auto w-10/12 ' > 
         <div className='text-[30px] text-white text-center' >
-            Choose your size
+            Kies je maat
         </div>
         {/* Metric units */}
-
-        <div className='text-white text-[20px] my-3 pl-2 ' >Metric Units</div>
-        <div className='grid grid-cols-2 w-full ' >
-            <button onClick={()=>{ setUnit('inch') }} className=' text-green-700 hover:text-white bg-white hover:bg-red-600 rounded-full h-9 w-full hover:underline ' >{`Imperial[Inch]`}</button>
-            <button onClick={()=>{setUnit('cm')}}  className='text-green-700 hover:text-white bg-white hover:bg-red-600 rounded-full h-9 w-full hover:underline ' >{`
-            Metric [cm]`}</button>
-        </div>
         
-        <div className='text-white text-[20px] my-3 pl-2 ' >Metric Units</div>
+        <div className='text-white text-[20px] my-3 pl-2 ' >Maat</div>
         <div className='flex flex-col grid-cols-12 w-full ' >
             {
                 dimension.map((item)=>{
@@ -67,7 +57,7 @@ const Size = () => {
                             ))
                         }} className=' flex justify-between items-center px-4 text-green-700 my-2 hover:text-white bg-white hover:bg-red-600 rounded-full h-9 w-full ' >
                             <span className='hover:underline' >
-                                {item.size} {unit}
+                                {item.size} CM
                             </span> 
                             <span>
                                 {item.price}

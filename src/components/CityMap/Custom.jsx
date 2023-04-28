@@ -10,10 +10,10 @@ const MapBoxApi = () => {
   const styles = useSelector((state)=> state.styleState );
   const searchQuery = useSelector((state)=>state.mapGeo)
 
-  const [lng, setLng] = useState(-122.431297);
-  const [lat, setLat] = useState(37.773972);
+  const [lng, setLng] = useState(4.47775);
+  const [lat, setLat] = useState(51.924442);
   const [zoom, setZoom] = useState(12);
-  const searchInputRef = useRef(null);
+  // const searchInputRef = useRef(null);
   const mapContainerRef = useRef(null);
   const mapRef = useRef(null);
 
@@ -77,6 +77,7 @@ const MapBoxApi = () => {
     const response = await fetch(geocodingUrl);
     const data = await response.json();
     const coordinates = data.features[0].center;
+    console.log(coordinates)
     mapRef.current.setCenter(coordinates);
 };
 

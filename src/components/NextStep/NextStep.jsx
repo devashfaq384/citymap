@@ -11,7 +11,7 @@ const NextStep = () => {
     dispatch(moveTo(name))
   }
 
-  let data =['Location' ,'Styles' ,'Text','Shapes','Material','Size']
+  let data =['Locatie' ,'Stijl' ,'Text','Vorm','Materiaal','Formaat']
   return (
     <div className='text-white' >
         <button onClick={()=>{
@@ -21,10 +21,9 @@ const NextStep = () => {
             }
           }
         }}  className='flex justify-center text-sm h-10 mt-[10%] items-center bg-[rgb(59,99,110)]  rounded-full w-full'>
-            Next Step
+            Volgende
             <ArrowRightIcon className='h-4 pl-3'></ArrowRightIcon>
         </button>
-        <div className='flex justify-center text-sm ml-[-20px] mt-2' >Order now</div>
     </div>
   )
 }

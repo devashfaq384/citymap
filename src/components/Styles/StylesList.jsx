@@ -1,11 +1,9 @@
-import Red from '../../images/red.png'
 import DarkYellow from '../../images/yellowDark.png'
 import Green from '../../images/green.png'
 import Normal from '../../images/normal.png'
 import DarkGreen from '../../images/greenary.png'
 import Pink from '../../images/pink.png'
 import Orange from '../../images/orange.png'
-import LightBlackRoads from '../../images/highCtras.png'
 import Dark from '../../images/dark.png'
 import Light from '../../images/light.png'
 import LightGray from '../../images/lightGray.png'
@@ -33,7 +31,7 @@ export const StylesList = [
     {
         name : "lightGreenBlue",
         style : "mapbox://styles/ashfaq384/clfwh3jx4003d01mpjtyjj3sj",
-        image : Light
+        image : LightGray
     },
     {
         name : "pink",
@@ -85,6 +83,6 @@ export const StylesList = [
     {
         name : "Light",
         style : "mapbox://styles/ashfaq384/clfwdovsg003401mpotp64xp4",
-        image : LightGray
+        image : DarkYellow
     }
 ]

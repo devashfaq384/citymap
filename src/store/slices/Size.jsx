@@ -6,16 +6,18 @@ const menuSlice = createSlice({
     name: 'sizeState',
     initialState: {
         direction : true,
-        height : "380px",
+        Shape : '',
+        height : '380px',
         width : '250px',
-        class : "rounded-full"
+        class : "rounded-full",
+        Sizes : ''
     },
     reducers: {
         changeSize(state, action) {
 
-            const { height, width, direction } = action.payload;
+            const { Sizes , height, width, Shape ,direction } = action.payload;
 
-                return { ...state , height, width, direction  };
+                return { ...state , Shape , height , width, direction  };
         }
     }
 })

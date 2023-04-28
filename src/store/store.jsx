@@ -4,6 +4,7 @@ import Size from './slices/Size';
 import Text from './slices/Text';
 import Style from './slices/styleSlice'
 import geocoderSlice from './slices/searchSlice';
+import addToCartSlice from './slices/addToCartSlice';
 
 const store = configureStore({
    reducer : {
@@ -11,7 +12,8 @@ const store = configureStore({
         sizeState : Size,
         textState : Text,
         styleState : Style,
-        mapGeo : geocoderSlice
+        mapGeo : geocoderSlice,
+        addToCart : addToCartSlice
     }
 });
 

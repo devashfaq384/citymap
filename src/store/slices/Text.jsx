@@ -5,7 +5,7 @@ import { createSlice } from "@reduxjs/toolkit";
 const textSlice = createSlice({
     name: 'textState',
     initialState: {
-        title : 'Amsterdam',
+        title : 'Rotterdam',
         subTitle : 'N°34°56′12″ S°78°34′90″'
     },
     reducers: {

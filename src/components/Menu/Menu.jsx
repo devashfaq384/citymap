@@ -19,11 +19,11 @@ const Menu = ({show}) => {
 
     let data =[
         {
-            name : "Location",
+            name : "Locatie",
             imgSrc : location
         },
         {
-            name : "Styles",
+            name : "Stijl",
             imgSrc : picture
         },
         {
@@ -31,15 +31,15 @@ const Menu = ({show}) => {
             imgSrc : Text
         },
         {
-            name : "Shapes",
+            name : "Vorm",
             imgSrc: Shape
         },
         {
-            name : "Material",
+            name : "Materiaal",
             imgSrc : Material
         },
         {
-            name : "Size",
+            name : "Formaat",
             imgSrc : Cart
         },
     ]
