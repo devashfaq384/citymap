@@ -30,21 +30,12 @@ const MapLayout = () => {
             </div>
                     <CityMap></CityMap>
             <div onClick={()=>{
-                dispatch(changeSize(
-                    
-                    
-                       dir === true ? 
-                        {
-                            direction : true ,
-                            height : '450px',
-                            width : '250px'
-                        }:
-                        {
-                            direction : false ,
-                            width : '450px',
-                            height : '250px'
-                        }
-                    
+                dispatch(changeSize(   
+                    {
+                        direction : true ,
+                        height : '240px',
+                        width : '380px'
+                    }
                 ))
             }} className='bg-white rounded-full p-3 absolute right-0 bottom-0 m-5 ' >
                 <img src={Rotate} alt='rotate' className='w-16' />

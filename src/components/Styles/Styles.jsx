@@ -13,21 +13,11 @@ const Styles = () => {
     const [selectedStyle, setSelectedStyle] = useState(null);
 
     const horizontal =()=>{
-        dispatch(changeSize(
-                    
-                    
-            dir === true ? 
-             {
-                 direction : true ,
-                 height : '450px',
-                 width : '250px'
-             }:
-             {
-                 direction : false ,
-                 width : '450px',
-                 height : '250px'
-             }
-         
+        dispatch(changeSize(      
+        {
+            height : '380px',
+            width : '240px'
+        }         
      ))
     }
  return (

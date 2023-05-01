@@ -15,7 +15,8 @@ const Shapes = () => {
         
         dispatch(changeSize({
             height:'350px',
-            width:'350px'
+            width:'350px',
+            shape:'square'
         }))
 
 
@@ -26,8 +27,9 @@ const Shapes = () => {
     // dispatch for Rectangle Horizontal shape 
     const rectangleX = ()=>{
         dispatch(changeSize({
-            height:'260px',
-            width:'420px'
+            height:'240px',
+            width:'380px',
+            shape:'rectangle-X'
         }))
         dispatch(cartValue({
             Shape : 'Rechthoek horizontaal'
@@ -36,8 +38,9 @@ const Shapes = () => {
     // dispatch for Rectangle vertical shape 
     const rectangleY = ()=>{
         dispatch(changeSize({
-            height:'400px',
-            width:'260px'
+            height:'380px',
+            width:'240px',
+            shape:'rectangle-Y'
         }))
         dispatch(cartValue({
             Shape : 'Rechthoek verticaal'
@@ -46,8 +49,9 @@ const Shapes = () => {
     // dispatch for circle shape 
     const circle = ()=>{
         dispatch(changeSize({
-            height:'300px',
-            width:'300px',
+            height:'250px',
+            width:'250px',
+            shape:'circle',
             class : 'rounded-full'
         }))
         dispatch(cartValue({

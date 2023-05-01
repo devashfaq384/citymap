@@ -11,20 +11,20 @@ const Size = () => {
         {
             size : "Small 11 x 17",
             price : "$35",
-            height : "360px",
-            width : "250px"
+            height : direction.shape=== "rectangle-Y" ? `${parseInt(direction.height, 10) - 20}px` : direction.height,
+            width: direction.shape=== "rectangle-X" ? `${parseInt(direction.width, 10) - 20}px` : direction.width
         },
         {
             size : "Medium 18 x 24",
             price : "$45",
-            height : '400px',
-            width : '250px'
+            height : direction.shape=== "rectangle-Y" ? `${parseInt(direction.height, 10) + 40}px` : direction.height,
+            width: direction.shape=== "rectangle-X" ? `${parseInt(direction.width, 10) + 40}px` : direction.width
         },
         {
             size : "Large 24 x 36",
             price : "$59",
-            height : '440px',
-            width : '250px'
+            height : direction.shape=== "rectangle-Y" ? `${parseInt(direction.height, 10) + 60}px` : direction.height,
+            width: direction.shape=== "rectangle-X" ? `${parseInt(direction.width, 10) + 60}px` : direction.width
         },
     ]
 
@@ -42,18 +42,12 @@ const Size = () => {
                     return(
                         <button onClick={()=>{
                              dispatch(changeSize(
-                                direction.direction === true ? 
                                 {
                                     height :  item.height ,
                                     width :  item.width ,
-                                    direction : direction.direction
-                                } : 
-                                {
-                                    height :  item.width,
-                                    width :  item.height,
-                                    direction : direction.direction
-                                }
-                            
+                                    direction : direction.direction,
+                                    shape : direction.shape
+                                }                            
                             ))
                         }} className=' flex justify-between items-center px-4 text-green-700 my-2 hover:text-white bg-white hover:bg-red-600 rounded-full h-9 w-full ' >
                             <span className='hover:underline' >
@@ -69,7 +63,7 @@ const Size = () => {
 
             <button className='flex justify-center text-sm h-10 mt-[10%] items-center bg-[rgb(59,99,110)] text-white rounded-full w-full'>
                 <CheckIcon className='h-5 font-bold pl-3'></CheckIcon>
-                Bestel mijn kaart
+                Order my map
             </button>
         </div>
     </div>
