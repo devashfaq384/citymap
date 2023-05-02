@@ -1,24 +1,45 @@
 import React from 'react'
 import { FiCircle , FiHexagon , FiSquare } from 'react-icons/fi'
 import { TbRectangle , TbRectangleVertical } from 'react-icons/tb'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { changeSize } from '../../store/slices/Size'
 import NextStep from '../NextStep/NextStep'
 import { cartValue } from '../../store/slices/addToCartSlice'
+import { hexagonData, rectangle_X, rectangle_Y, roundData, squareData } from './SizeData'
 
 const Shapes = () => {
 
     const dispatch = useDispatch()
+    const  direction  = useSelector((state)=>state.sizeState)
+
     // dispatch for square shape 
     const square = ()=>{
         
         
         dispatch(changeSize({
+        ...direction,
             height:'350px',
             width:'350px',
-            shape:'square'
+            shape:'square',
+            sizes:squareData
         }))
 
+        dispatch(cartValue({
+            Shape : 'Vierkant'
+        }))
+    }
+    // hexagone shape is here
+    const hexagone = ()=>{
+        
+        
+        dispatch(changeSize({
+        ...direction,
+            height:'300px',
+            width:'300px',
+            shape:'hexagon',
+            class:"hexagon",
+            sizes: hexagonData
+        }))
 
         dispatch(cartValue({
             Shape : 'Vierkant'
@@ -27,20 +48,25 @@ const Shapes = () => {
     // dispatch for Rectangle Horizontal shape 
     const rectangleX = ()=>{
         dispatch(changeSize({
+        ...direction,
             height:'240px',
             width:'380px',
-            shape:'rectangle-X'
+            shape:'rectangle-X',
+            sizes: rectangle_X
         }))
         dispatch(cartValue({
             Shape : 'Rechthoek horizontaal'
         }))
+        
     }
     // dispatch for Rectangle vertical shape 
     const rectangleY = ()=>{
         dispatch(changeSize({
+        ...direction,
             height:'380px',
             width:'240px',
-            shape:'rectangle-Y'
+            shape:'rectangle-Y',
+            sizes: rectangle_Y
         }))
         dispatch(cartValue({
             Shape : 'Rechthoek verticaal'
@@ -49,10 +75,12 @@ const Shapes = () => {
     // dispatch for circle shape 
     const circle = ()=>{
         dispatch(changeSize({
+        ...direction,
             height:'250px',
             width:'250px',
             shape:'circle',
-            class : 'rounded-full'
+            class : 'rounded-full',
+            sizes: roundData
         }))
         dispatch(cartValue({
             Shape : 'Rond'
@@ -62,9 +90,9 @@ const Shapes = () => {
 
   return (
     <div className=' mx-auto sm:w-auto overflow-y-hidden' >
-        <div className='text-white text-center text-[30px] mb-5'>Choose favourite shape</div>
+        <div className='text-white text-center text-[30px] mb-5'>Kies favoriete vorm</div>
     <div className='mx-auto sm:w-auto text-center gap-5 flex sm:flex-col overflow-y-hidden '>
-        <button className='bg-red-200 md:w-full rounded   py-4 h-fit px-4 flex' >
+        <button onClick={hexagone} className='bg-red-200 md:w-full rounded   py-4 h-fit px-4 flex' >
             <FiHexagon className='h-6 w-6' ></FiHexagon>
             <span className='pl-2' >
                 Hexagon

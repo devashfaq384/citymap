@@ -77,16 +77,14 @@ const MapBoxApi = () => {
     const response = await fetch(geocodingUrl);
     const data = await response.json();
     const coordinates = data.features[0].center;
-    console.log(coordinates)
     mapRef.current.setCenter(coordinates);
 };
 
   useEffect(() => {
     handleSearch()
   }, [searchQuery])
-  console.log(dimension.class)
   return (
-    <div className={ dimension.shape === 'circle' ? dimension.class : ' '} style={{ overflow: "hidden" ,height: dimension.height , width: dimension.width ,transition: "height 0.5s ease-out, width 0.5s ease-out"  }}>
+    <div className={ ` ${dimension.shape === 'hexagon' ? 'hexagon' : ' '} ${dimension.shape === 'circle' ? dimension.class : ' '}`} style={{ overflow: "hidden" ,height: dimension.height , width: dimension.width ,transition: "height 0.5s ease-out, width 0.5s ease-out"  }}>
         <div ref={mapContainerRef} className="map-container" />
     </div>
     );

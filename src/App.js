@@ -7,7 +7,6 @@ function App() {
   return (
     <Provider store={store}>
       <CityLayout/>
-      {/* <Shapes></Shapes> */}
     </Provider>
   );
 }

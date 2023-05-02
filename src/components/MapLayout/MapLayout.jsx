@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Shattered from '../../images/shattered.png'
 import Logo from '../../images/mapLogo.png'
 import CityMap from '../CityMap/CityMap'
@@ -8,9 +8,9 @@ import { useDispatch, useSelector } from 'react-redux'
 import { TiPlus } from 'react-icons/ti'
 
 const MapLayout = () => {
-
-    const dir = useSelector((state)=>state.sizeState)
+    const dimension = useSelector((state)=>state.sizeState)
     const dispatch = useDispatch()
+    const [shape, setShape] = useState(dimension.shape)
 
 
   return (
@@ -30,13 +30,15 @@ const MapLayout = () => {
             </div>
                     <CityMap></CityMap>
             <div onClick={()=>{
+                const newShape = shape === 'rectangle-X' ? 'rectangle-Y':'rectangle-X'
                 dispatch(changeSize(   
-                    {
-                        direction : true ,
-                        height : '240px',
-                        width : '380px'
+                    {   ...dimension,
+                        height : shape === 'rectangle-X' ? '380px' : '240px' ,
+                        width : shape === 'rectangle-X' ? '240px' : '380px',
+                        shape: newShape
                     }
                 ))
+                setShape(newShape)
             }} className='bg-white rounded-full p-3 absolute right-0 bottom-0 m-5 ' >
                 <img src={Rotate} alt='rotate' className='w-16' />
             </div>
