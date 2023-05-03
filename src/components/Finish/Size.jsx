@@ -42,8 +42,8 @@ const Size = () => {
                         <button onClick={()=>{
                             dispatch(changeSize(
                                 {   ...direction,
-                                    height :  direction.shape=== "rectangle-Y" || "hexagon" || "circle" || 'square' ? +direction.height.slice(0, -2) + 40 + "px" : direction.height,
-                                    width :  direction.shape=== "rectangle-X" || "hexagon" || "circle" || 'square' ? +direction.width.slice(0, -2) + 40 + "px" : direction.width,
+                                    height :  direction.shape=== "rectangle-Y" || "hexagon" || "circle" || 'square' ? +direction.height.slice(0, -2) + item.changeAmount + "px" : direction.height,
+                                    width :  direction.shape=== "rectangle-X" || "hexagon" || "circle" || 'square' ? +direction.width.slice(0, -2) + item.changeAmount + "px" : direction.width,
                                     shape : direction.shape,
                                     sizes: data
                                 }                            

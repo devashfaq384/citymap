@@ -16,8 +16,8 @@ const Styles = () => {
     const horizontal =()=>{
         dispatch(changeSize(      
         {   ...dir,
-            height : '380px',
-            width : '240px',
+            height : '240px',
+            width : '380px',
             shape: 'rectangle-X'
         }         
      ))
