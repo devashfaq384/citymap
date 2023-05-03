@@ -8,6 +8,8 @@ import { changeSize } from '../../store/slices/Size';
 const Material = () => {
   const dispatch = useDispatch()
   const dimension = useSelector((state) => state.sizeState)
+  const addToCartValue = useSelector((state)=> state.cartValueState )
+
   const [price, setPrice] = useState(dimension.sizes[0].priceBasic)
 
   const handleChange = (event) => {
@@ -21,16 +23,11 @@ const Material = () => {
     }else{
       setPrice(dimension.sizes[0].pricePro)
     }
-
-    if (event.target.value === 'basic') {
       dispatch(cartValue({
-        Material: 'BASIC'
+        ...addToCartValue,
+        Material: event.target.value
       }))
-    } else {
-      dispatch(cartValue({
-        Material: 'PRO'
-      }))
-    }
+    
   }
 
   return (

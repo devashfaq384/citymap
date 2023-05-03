@@ -3,10 +3,10 @@ import { createSlice } from "@reduxjs/toolkit";
 // const initialState = [];
 
 const addToCartSlice = createSlice({
-    name: 'menuState',
+    name: 'cartValueState',
     initialState: {
         Location : '',
-        Style : '',
+        Style : {},
         Text : {
             title : '',
             Subtitle : '',
@@ -14,7 +14,7 @@ const addToCartSlice = createSlice({
         },
         Shape : '',
         Material :'',
-        Size :''
+        Size :{}
     },
     reducers: {
         cartValue(state, action) {

@@ -1,12 +1,14 @@
 import React from 'react'
 import { useState } from 'react'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import NextStep from '../NextStep/NextStep'
 import { changeSubTitle , changeTitle } from '../../store/slices/Text'
 import { cartValue } from '../../store/slices/addToCartSlice'
 
 const Text = () => {
   const dispatch = useDispatch()
+  const addToCartValue = useSelector((state)=> state.cartValueState )
+
   
   const [isChecked, setIsChecked] = useState(false);
   const [allIsChecked, setAllIsChecked] = useState(false);
@@ -26,6 +28,7 @@ const Text = () => {
       subTitle : ""
       }))
       dispatch(cartValue({
+        ...addToCartValue,
         TextValue:{
           display : "none"
         }
@@ -39,6 +42,7 @@ const Text = () => {
       title : value
     }))
     dispatch(cartValue({
+      ...addToCartValue,
       TextValue:{
         title : value
       }
@@ -52,6 +56,7 @@ const Text = () => {
       subTitle : value
     }))
     dispatch(cartValue({
+      ...addToCartValue,
       TextValue:{
         Subtitle : value
       }

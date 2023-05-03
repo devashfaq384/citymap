@@ -3,10 +3,13 @@ import React, {  useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { changeSize } from '../../store/slices/Size' 
 import { hexagonData, rectangle_X, rectangle_Y, roundData, squareData } from '../Shapes/SizeData'
+import { cartValue } from '../../store/slices/addToCartSlice'
 // import { sizes } from '../Shapes/SizeData'
 
 const Size = () => {
     const dispatch = useDispatch()
+    const addToCartValue = useSelector((state)=> state.cartValueState )
+
     const  direction  = useSelector((state)=>state.sizeState)
     const [data, setData] = useState(rectangle_Y)
     
@@ -45,6 +48,10 @@ const Size = () => {
                                     sizes: data
                                 }                            
                             ))
+                            dispatch(cartValue({
+                                ...addToCartValue,
+                                Size: item
+                            }))
                         }} className=' flex justify-between items-center px-4 text-green-700 my-2 hover:text-white bg-white hover:bg-red-600 rounded-full h-9 w-full ' >
                             <span className='hover:underline' >
                                  {item.name} {item.measures}

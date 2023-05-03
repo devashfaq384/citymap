@@ -25,12 +25,12 @@ function CityLayout() {
             <Menu show={setOpt}  ></Menu>
         </div>
         <div className={` ${opt} w-full sm:w-[400px] bg-red-400 h-auto sm:relative sm:h-[100vh] flex pt-8`} >
-            {menu === "Locatie" ? <Location ></Location> : null }
-            {menu === "Stijl" ? <Styles></Styles>: null }
-            {menu === "Text" ? <Text></Text>:null}
-            {menu === "Formaat" ? <Size></Size>:null}
-            {menu === "Vorm" ? <Shapes></Shapes>:null}
-            {menu === "Materiaal" ? <Material></Material>:null}
+            {menu.menuName === "Locatie" ? <Location ></Location> : null }
+            {menu.menuName === "Stijl" ? <Styles></Styles>: null }
+            {menu.menuName === "Text" ? <Text></Text>:null}
+            {menu.menuName === "Formaat" ? <Size></Size>:null}
+            {menu.menuName === "Vorm" ? <Shapes></Shapes>:null}
+            {menu.menuName === "Materiaal" ? <Material></Material>:null}
         </div>
           <div className={`bg-gren  w-6 block cursor-pointer sm:hidden ml-auto  ${opt} `} >
             <XMarkIcon className='h-6 w-6 text-white' onClick={()=>cross()} ></XMarkIcon>

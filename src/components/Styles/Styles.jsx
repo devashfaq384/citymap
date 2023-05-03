@@ -10,6 +10,7 @@ import { cartValue } from '../../store/slices/addToCartSlice'
 const Styles = () => {
     const dispatch = useDispatch()
     const dir = useSelector((state)=>state.sizeState)
+    const addToCartValue = useSelector((state)=> state.cartValueState )
     const [selectedStyle, setSelectedStyle] = useState(null);
 
     const horizontal =()=>{
@@ -33,7 +34,8 @@ const Styles = () => {
                     setSelectedStyle(item);
                     dispatch( changeStyle(item) )
                     dispatch(cartValue({
-                        Style : item.style
+                        ...addToCartValue,
+                        Style : item
                     }))
                 }} className="relative w-16 h-16 rounded-2xl overflow-hidden">
                         <img src={item.image} alt="Red" className="w-full h-full object-cover" />

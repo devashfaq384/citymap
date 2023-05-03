@@ -11,10 +11,11 @@ const Shapes = () => {
 
     const dispatch = useDispatch()
     const  direction  = useSelector((state)=>state.sizeState)
+  const addToCartValue = useSelector((state)=> state.cartValueState )
+
 
     // dispatch for square shape 
     const square = ()=>{
-        
         
         dispatch(changeSize({
         ...direction,
@@ -25,6 +26,7 @@ const Shapes = () => {
         }))
 
         dispatch(cartValue({
+            ...addToCartValue,
             Shape : 'Vierkant'
         }))
     }
@@ -42,6 +44,7 @@ const Shapes = () => {
         }))
 
         dispatch(cartValue({
+            ...addToCartValue,
             Shape : 'Vierkant'
         }))
     }
@@ -55,6 +58,7 @@ const Shapes = () => {
             sizes: rectangle_X
         }))
         dispatch(cartValue({
+            ...addToCartValue,
             Shape : 'Rechthoek horizontaal'
         }))
         
@@ -69,6 +73,7 @@ const Shapes = () => {
             sizes: rectangle_Y
         }))
         dispatch(cartValue({
+            ...addToCartValue,
             Shape : 'Rechthoek verticaal'
         }))
     }
@@ -83,6 +88,7 @@ const Shapes = () => {
             sizes: roundData
         }))
         dispatch(cartValue({
+            ...addToCartValue,
             Shape : 'Rond'
         }))
     }

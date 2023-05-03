@@ -6,6 +6,7 @@ import { useDispatch, useSelector } from 'react-redux'
 
 const NextStep = () => {
   const initialVal = useSelector((state)=> state.menuState )
+  console.log(initialVal , 'menu log')
   const dispatch = useDispatch()
   const next = (name)=>{
     dispatch(moveTo(name))
@@ -16,7 +17,7 @@ const NextStep = () => {
     <div className='text-white' >
         <button onClick={()=>{
           for (let i = 0; i < data.length; i++) {
-            if(data[i] === initialVal ){
+            if(data[i] === initialVal.menuName ){
               next(data[i+1])
             }
           }

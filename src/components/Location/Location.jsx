@@ -9,7 +9,7 @@ import { cartValue } from '../../store/slices/addToCartSlice'
 
 const Location = () => {
   const dispatch = useDispatch()
-  // const geocoderInputValue = useSelector((state) => state);
+  const addToCartValue = useSelector((state)=> state.cartValueState )
   const value = useRef()
 
   const handleSearch = (event) => {
@@ -21,9 +21,9 @@ const Location = () => {
       title: geocoderInput
     }))
     dispatch(cartValue({
+      ...addToCartValue,
       Location : geocoderInput
     }))
-    // console.log(geocoderInputValue)
 
   };
   
@@ -39,12 +39,7 @@ const Location = () => {
             <MagnifyingGlassIcon className='h-5 text-white' ></MagnifyingGlassIcon>
           </button>
         </div>
-        {/* <div className='my-3 flex'>
-          <input type="checkbox" name="city" className=' cursor-pointer outline-none border-none ring-0' /> 
-          <label htmlFor='city' className='pl-3 text-sm text-white cursor-pointer text-gray-600' >
-            Show city names on the map
-          </label> 
-        </div> */}
+
       </form>
 
       {/* favorites  */}
