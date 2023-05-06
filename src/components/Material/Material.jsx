@@ -10,6 +10,7 @@ const Material = () => {
   const dimension = useSelector((state) => state.sizeState)
   const addToCartValue = useSelector((state)=> state.cartValueState )
 
+  
   const [price, setPrice] = useState(dimension.sizes[0].priceBasic)
 
   const handleChange = (event) => {

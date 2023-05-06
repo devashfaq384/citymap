@@ -11,16 +11,15 @@ const Shapes = () => {
 
     const dispatch = useDispatch()
     const  direction  = useSelector((state)=>state.sizeState)
-  const addToCartValue = useSelector((state)=> state.cartValueState )
-
+    const addToCartValue = useSelector((state)=> state.cartValueState )
 
     // dispatch for square shape 
     const square = ()=>{
         
         dispatch(changeSize({
         ...direction,
-            height:'350px',
-            width:'350px',
+            height:'270px',
+            width:'270px',
             shape:'square',
             sizes:squareData
         }))
@@ -98,31 +97,31 @@ const Shapes = () => {
     <div className=' mx-auto sm:w-auto overflow-y-hidden' >
         <div className='text-white text-center text-[30px] mb-5'>Kies favoriete vorm</div>
     <div className='mx-auto sm:w-auto text-center gap-5 flex sm:flex-col overflow-y-hidden '>
-        <button onClick={hexagone} className='bg-red-200 md:w-full rounded   py-4 h-fit px-4 flex' >
+        <button onClick={hexagone} className='bg-red-200 md:w-full rounded   py-4 h-fit px-4 flex hover:bg-red-600 hover:text-white  w-full transition-all duration-500 ease-out' >
             <FiHexagon className='h-6 w-6' ></FiHexagon>
             <span className='pl-2' >
                 Hexagon
             </span>
         </button>
-        <button onClick={square} className='bg-red-200 md:w-full rounded   py-4 h-fit px-4 flex' >
+        <button onClick={square} className='bg-red-200 md:w-full rounded   py-4 h-fit px-4 flex hover:bg-red-600 hover:text-white  w-full transition-all duration-500 ease-out ' >
             <FiSquare className='h-6 w-6' ></FiSquare>
             <span className='pl-2' >
             Vierkant
             </span>
         </button>
-        <button onClick={circle} className='bg-red-200 md:w-full rounded   py-4 h-fit px-4 flex' >
+        <button onClick={circle} className='bg-red-200 md:w-full rounded   py-4 h-fit px-4 flex hover:bg-red-600 hover:text-white  w-full transition-all duration-500 ease-out' >
             <FiCircle className='h-6 w-6' ></FiCircle>
             <span className='pl-2' >
                 Rond
             </span>
         </button>
-        <button onClick={rectangleY} className='bg-red-200 md:w-full rounded   py-4 h-fit px-4 flex' >
+        <button onClick={rectangleY} className='bg-red-200 md:w-full rounded   py-4 h-fit px-4 flex hover:bg-red-600 hover:text-white  w-full transition-all duration-500 ease-out' >
             <TbRectangleVertical className='h-6 w-6' ></TbRectangleVertical>
             <span className='pl-2' >
             Rechthoek verticaal
             </span>
         </button>
-        <button onClick={rectangleX} className='bg-red-200 md:w-full rounded py-4 h-fit px-4 flex' >
+        <button onClick={rectangleX} className='bg-red-200 md:w-full rounded py-4 h-fit px-4 flex hover:bg-red-600 hover:text-white  w-full transition-all duration-500 ease-out' >
             <TbRectangle className='h-6 w-6' ></TbRectangle>
             <span className='pl-2' >
             Rechthoek horizontaal

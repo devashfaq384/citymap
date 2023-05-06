@@ -16,7 +16,6 @@ const Menu = ({show}) => {
     const move = (name)=>{
         dispatch(moveTo(name))
         show('block')
-        console.log(currentMenu , 'menu log')
     }
 
     let data =[

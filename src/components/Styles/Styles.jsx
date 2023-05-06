@@ -32,7 +32,7 @@ const Styles = () => {
             return(
                 <div key={index} onClick={()=>{
                     setSelectedStyle(item);
-                    dispatch( changeStyle(item) )
+                    dispatch(changeStyle(item) )
                     dispatch(cartValue({
                         ...addToCartValue,
                         Style : item

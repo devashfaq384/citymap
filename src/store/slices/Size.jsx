@@ -8,8 +8,8 @@ const menuSlice = createSlice({
         direction : true,
         shape : 'rectangle-Y',
         material: 'basic',
-        height : '360px',
-        width : '220px',
+        height : '380px',
+        width : '240px',
         class : "rounded-full",
         sizes : [
             {
@@ -46,7 +46,8 @@ const menuSlice = createSlice({
                 priceBasic:'€444',
                 pricePro : '€569',
                 changeAmount : 50
-            },        
+            },
+           
         ]
     },
     reducers: {

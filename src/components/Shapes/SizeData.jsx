@@ -11,28 +11,28 @@ export const squareData=[
         measures:'(65x65 CM)',
         priceBasic:'€224',
         pricePro : '€274',
-        changeAmount : 20
+        changeAmount : 18
     },
     {
         name:'L',
         measures:'(80x80 CM)',
         priceBasic:'€254',
         pricePro : '€309',
-        changeAmount : 30
+        changeAmount : 28
     },
     {
         name:'XL',
         measures:'(100x100 CM)',
         priceBasic:'€334',
         pricePro : '€412',
-        changeAmount : 40
+        changeAmount : 35
     },
     {
         name:'XXL',
         measures:'(140x140 CM)',
         priceBasic:'€522',
         pricePro : '€674',
-        changeAmount : 50
+        changeAmount : 45
     },
 ] 
 
