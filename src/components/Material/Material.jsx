@@ -39,7 +39,7 @@ const Material = () => {
         id="acoustic"
         className='ring-0 w-full outline-none rounded-xl py-1 bg-white text-gray-600'
       >
-        <option value={1} selected> Kies een optie</option>
+        <option value="basic" selected> Kies een optie</option>
         <option value="basic">BASIC {`(AW 0.65)`}</option>
         {
           dimension.sizes[0].pricePro === '0' ? null : <option value='pro'>PRO {`(AW 0.90)`}</option>
