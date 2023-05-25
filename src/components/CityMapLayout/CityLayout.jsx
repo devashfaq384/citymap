@@ -21,10 +21,10 @@ function CityLayout() {
   return (
     <div className='flex flex-col-reverse sm:flex-row ' >
       <div className={`flex w-full sm:w-auto absolute sm:relative flex-col-reverse sm:flex-row`} style={{zIndex : 1}} >
-        <div className='w-full sm:flex-col pl-20 xs:pl-5 sm:pl-0 sm:w-[100px] bg-red-400 h-auto sm:relative sm:h-[100vh] overflow-y-hidden'>
+        <div className='w-full sm:flex-col pl-20 xs:pl-5 sm:pl-0 sm:w-[100px] bg-[rgb(59,99,110)] h-auto sm:relative sm:h-[100vh] overflow-y-hidden'>
             <Menu show={setOpt}  ></Menu>
         </div>
-        <div className={` ${opt} w-full sm:w-[400px] bg-red-400 h-auto sm:relative sm:h-[100vh] flex pt-8`} >
+        <div className={` ${opt} w-full sm:w-[400px] bg-[rgb(59,99,110)] h-auto sm:relative sm:h-[100vh] flex pt-8`} >
             {menu.menuName === "Locatie" ? <Location ></Location> : null }
             {menu.menuName === "Stijl" ? <Styles></Styles>: null }
             {menu.menuName === "Text" ? <Text></Text>:null}
