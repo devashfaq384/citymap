@@ -14,7 +14,7 @@ const LocationFav = ({name}) => {
     }))
   }
   return (
-        <button onClick={btnLocation} className='text-white bg-[rgb(59,99,110)] rounded-full h-10 shadow-xl ' >{name}</button>
+        <button onClick={btnLocation} className='text-white bg-[rgb(254,0,140)] rounded-full h-10 shadow-xl ' >{name}</button>
   )
 }
 
