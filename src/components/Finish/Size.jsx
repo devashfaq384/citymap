@@ -68,7 +68,7 @@ const Size = () => {
                 })
             }
 
-            <button className='flex justify-center text-sm h-10 mt-[10%] items-center bg-[rgb(59,99,110)] text-white rounded-full w-full'>
+            <button className='flex justify-center text-sm h-10 mt-[10%] items-center bg-[rgb(254,0,140)] text-white rounded-full w-full'>
                 <CheckIcon className='h-5 font-bold pl-3'></CheckIcon>
                 Afronden 
             </button>
