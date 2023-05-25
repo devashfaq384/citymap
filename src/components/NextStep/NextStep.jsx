@@ -21,7 +21,7 @@ const NextStep = () => {
               next(data[i+1])
             }
           }
-        }}  className='flex justify-center text-sm h-10 mt-[10%] items-center bg-[rgb(59,99,110)]  rounded-full w-full'>
+        }}  className='flex justify-center text-sm h-10 mt-[10%] items-center bg-[rgb(254,0,140)]  rounded-full w-full'>
             Volgende
             <ArrowRightIcon className='h-4 pl-3'></ArrowRightIcon>
         </button>
