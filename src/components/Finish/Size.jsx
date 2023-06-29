@@ -5,6 +5,7 @@ import { changeSize } from '../../store/slices/Size'
 import { hexagonData, rectangle_X, rectangle_Y, roundData, squareData } from '../Shapes/SizeData'
 import { cartValue } from '../../store/slices/addToCartSlice'
 // import { sizes } from '../Shapes/SizeData'
+import PDFDown from './fileDownload'
 
 const Size = () => {
     const dispatch = useDispatch()
@@ -72,6 +73,9 @@ const Size = () => {
                 <CheckIcon className='h-5 font-bold pl-3'></CheckIcon>
                 Afronden 
             </button>
+            <div>
+                {/* <PDFDown></PDFDown> */}
+            </div>
         </div>
     </div>
   )

@@ -6,6 +6,7 @@ import Rotate from '../../images/rotate.png'
 import { changeSize } from '../../store/slices/Size'
 import { useDispatch, useSelector } from 'react-redux'
 import { TiPlus } from 'react-icons/ti'
+import { Link } from 'react-router-dom'
 
 const MapLayout = () => {
     const dimension = useSelector((state)=>state.sizeState)
@@ -18,9 +19,11 @@ const MapLayout = () => {
             <div className='w-32 pt-5 md:mx-auto' >
                 <img src={Logo} alt="logo" />
             </div>
-            <div className='flex gap-4 absolute top-0 right-0 mt-5' >
+            <div className='flex gap-4 absolute top-0 right-0 mt-5 mr-2' >
                 <div className='bg-white rounded-md p-1 md:py-2 md:px-2 w-[1000%] ' >Shooping Cart</div>
-                <div className='bg-white rounded-md p-1 md:py-2 md:px-2 ' >Help?</div>
+                <Link to='/help'>
+                    <div className='bg-white rounded-md p-1 md:py-2 md:px-2'>Help?</div>
+                </Link>
             </div>
         </div>
         <div className=' h-[90%] flex flex-col justify-center items-center '>
