@@ -20,7 +20,9 @@ const MapLayout = () => {
                 <img src={Logo} alt="logo" />
             </div>
             <div className='flex gap-4 absolute top-0 right-0 mt-5 mr-2' >
-                <div className='bg-white rounded-md p-1 md:py-2 md:px-2 w-[1000%] ' >Shooping Cart</div>
+                <Link to='/cart' >
+                    <div className='bg-white rounded-md  w-fit p-1 md:py-2 md:px-2  ' >Shooping Cart</div>
+                </Link>
                 <Link to='/help'>
                     <div className='bg-white rounded-md p-1 md:py-2 md:px-2'>Help?</div>
                 </Link>

@@ -14,11 +14,13 @@ const addToCartSlice = createSlice({
         },
         Shape : '',
         Material :'',
-        Size :{}
+        Size :{},
+        Price : "",
+        cartSize: ''
     },
     reducers: {
         cartValue(state, action) {
-            const { Location , Style , TextValue , Shape , Material , Size } = action.payload
+            const { Location , Style , TextValue , Shape , Material , Size, Price } = action.payload
             return {
                 ...state,
                 Location,
@@ -30,6 +32,7 @@ const addToCartSlice = createSlice({
                 Shape,
                 Material,
                 Size,
+                Price
               };
         }
     }

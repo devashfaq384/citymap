@@ -54,8 +54,8 @@ const Size = () => {
                             ))
                             setAmount(item.changeAmount)
                             dispatch(cartValue({
-                                ...addToCartValue,
-                                Size: item
+                                Size: item.measures,
+                                Price: direction.material === 'pro' || undefined ? (item.pricePro === '0' ? item.priceBasic : item.pricePro) : item.priceBasic
                             }))
                         }} className=' flex justify-between items-center px-4 text-green-700 my-2 hover:text-white bg-white hover:bg-red-600 rounded-full h-9 w-full transition-all duration-500 ease-out ' >
                             <span className='hover:underline' >
